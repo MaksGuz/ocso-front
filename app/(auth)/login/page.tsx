@@ -11,7 +11,7 @@ export default function LoginPage() {
         </div>
             <div className="flex flex-col items-center gap-2">
 
-         <Button color="primary">Iniciar sesión</Button>
+         <Button color="primary">Iniciar sesiónn</Button>
          <p>
             ¿No tienes una cuenta? <Link href="/signup">Registrarse</Link>
          </p>
