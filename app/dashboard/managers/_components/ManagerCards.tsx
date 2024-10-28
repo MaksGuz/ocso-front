@@ -26,7 +26,7 @@ export default async function ManagersCards() {
             </Divider>
             <CardBody> 
                 <p className="w-full">Email: <b>{manager.managerEmail}</b></p>
-                <p className="w-full">Number: <b>{manager.managerPhoneNumber}</b></p>  
+                <p className="w-full">Number: <b>{manager.managerPhoneNumber}</b></p>
             </CardBody>
         </Card>
         </Link>)

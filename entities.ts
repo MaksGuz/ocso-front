@@ -19,7 +19,7 @@ export interface Employee {
   user?: any;
 }
 
-export interface Manager{
+export interface Manager {
     managerId: string;
     managerFullName: string;
     managerSalary: number;
@@ -27,4 +27,22 @@ export interface Manager{
     managerPhoneNumber: string;
     location: Location;
     user: any;
+}
+
+export interface Provider {
+
+    providerId: string;
+    providerName: string;
+    providerEmail: string;
+    providerPhoneNumber: string;
+    products: Product[]
+
+}
+
+export interface Product {
+    productId: string;
+    productName: string;
+    price: number;
+    countSeal: number;
+    provider: Provider
 }
