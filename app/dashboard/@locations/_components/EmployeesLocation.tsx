@@ -17,7 +17,8 @@ export default async function EmployeesLocation({ store }: { store: string | str
     const data: Employee[] = await response.json()
     return data.map((employee: Employee) => {
         const fullName = employee.employeeName + " " + employee.employeeLastName
-        return <Card className="mx-10 my-10">
+        return (
+        <Card className="mx-10 my-10">
             <CardHeader>
                 <p className="w-full">Nombre: <b>{fullName}</b></p>
             </CardHeader>
@@ -27,6 +28,6 @@ export default async function EmployeesLocation({ store }: { store: string | str
                 <p className="w-full">Email: <b>{employee.employeeEmail}</b></p>
                 <p className="w-full">Number: <b>{employee.employeePhoneNumber}</b></p>  
             </CardBody>
-        </Card>
+        </Card>)
     });
 }
