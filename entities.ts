@@ -40,7 +40,8 @@ export interface Provider {
 }
 
 export interface Product {
-    productPrice: ReactNode;
+    productCountSeal(productCountSeal: any): string | undefined;
+    productPrice: number;
     productId: string;
     productName: string;
     price: number;

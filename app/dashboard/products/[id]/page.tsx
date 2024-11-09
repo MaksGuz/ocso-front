@@ -37,7 +37,7 @@ export default async function ProductPage({
           Precio: {product.productPrice}
         </h2>
         <h3 className="text-md font-bold text-white text-center py-2">
-          Cant. de Sellos{product.productCountSeal}
+          Cant. de Sellos{product.countSeal}
         </h3>
       </div>
       <UpdateProduct product={product} providers={providers} />
