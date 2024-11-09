@@ -40,6 +40,7 @@ export interface Provider {
 }
 
 export interface Product {
+    productPrice: ReactNode;
     productId: string;
     productName: string;
     price: number;

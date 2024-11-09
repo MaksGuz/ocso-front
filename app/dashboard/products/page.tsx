@@ -18,7 +18,7 @@ export const ProductsPage = async () => {
     return (
       <div className="h-[90vh] w-full">
         <div className="w-3/12">
-          <FilteredCards products={products} />
+          <FilteredCards products={products} providers={[]} />
         </div>
       </div>
     );
