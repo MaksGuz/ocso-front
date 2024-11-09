@@ -1,7 +1,9 @@
 "use server";
+
 import { API_URL } from "@/constants";
 import { authHeaders } from "@/helpers/authHeaders";
 import { revalidateTag } from "next/cache";
+
 export default async function createProduct(formData: FormData) {
   let product: any = {};
   for (const key of formData.keys()) {
