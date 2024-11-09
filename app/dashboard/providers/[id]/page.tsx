@@ -4,7 +4,7 @@ import ProviderCard from "../_components/ProviderCard";
 import { Product, Provider } from "@/entities";
 import ProductCard from "./_components/ProductCard";
 import Link from "next/link";
-import FormUpdateProvider from "./_components/FormCreateProvider";
+import  FormUpdateProvider from "./_components/FormUpdateProvider";
 
 export default async function ProviderPage({
   params,
