@@ -18,8 +18,7 @@ export default function ProductCard({ product }: { product: Product }) {
           Proveedor:{" "}
           <Link
             className="font-bold underline"
-            href={`/dashboard/providers/${product.provider.providerId}`}
-          >
+            href={`/dashboard/providers/${product.provider.providerId}`}>
             {product.provider.providerName}
           </Link>
         </p>

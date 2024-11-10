@@ -40,7 +40,6 @@ export interface Provider {
 }
 
 export interface Product {
-    productCountSeal(productCountSeal: any): string | undefined;
     productPrice: number;
     productId: string;
     productName: string;

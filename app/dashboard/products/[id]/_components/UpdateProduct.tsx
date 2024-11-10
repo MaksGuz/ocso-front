@@ -1,17 +1,11 @@
-import updateProduct from "@/actions/products/update";
 import { Product, Provider } from "@/entities";
+import updateProduct from "@/actions/products/update";
 import { Button, Input } from "@nextui-org/react";
 import SelectProvider from "../../_components/SelectProvider";
 import DeleteProduct from "./DeleteProduct";
 import { LuCheck } from "react-icons/lu";
 
-export default function UpdateProduct({
-  product,
-  providers,
-}: {
-  product: Product;
-  providers: Provider[];
-}) {
+export default function UpdateProduct({product, providers}: {product: Product; providers: Provider[];}) {
   const { productId } = product;
   const updateProductById = updateProduct.bind(null, productId);
   return (
@@ -24,7 +18,7 @@ export default function UpdateProduct({
       <Input
         name="countSeal"
         label="Num. de Sellos"
-        defaultValue={String(product.productCountSeal)}
+        defaultValue={String(product.countSeal)}
       />
       <Input
         name="price"
