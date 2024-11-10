@@ -12,11 +12,9 @@ export default async function createProduct(formData: FormData) {
             }
         }
         
-        // Asegurarse de que los campos numéricos sean números
         product.price = Number(product.price);
         product.countSeal = Number(product.countSeal);
         
-        // Asegurarse de que provider sea un string
         if (typeof product.provider !== 'string') {
             throw new Error('Provider must be a string');
         }
