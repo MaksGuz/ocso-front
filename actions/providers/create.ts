@@ -3,7 +3,6 @@
 import { API_URL } from "@/constants";
 import { authHeaders } from "@/helpers/authHeaders";
 import { revalidateTag } from "next/cache";
-import { console } from "node:inspector/promises";
 
 export default async function createProvider (formData: FormData) {
     let provider:any = {};

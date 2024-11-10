@@ -1,9 +1,15 @@
+<<<<<<< HEAD
 import updateProduct from "@/actions/products/update";
 import { Product, Provider } from "@/entities";
+=======
+import { Product, Provider } from "@/entities";
+import updateProduct from "@/actions/products/update";
+>>>>>>> cd678fff4b54b253c22d9ef8494b3089a41eb792
 import { Button, Input } from "@nextui-org/react";
 import SelectProvider from "../../_components/SelectProvider";
 import DeleteProduct from "./DeleteProduct";
 import { LuCheck } from "react-icons/lu";
+<<<<<<< HEAD
 export default function UpdateProduct({
   product,
   providers,
@@ -11,6 +17,10 @@ export default function UpdateProduct({
   product: Product;
   providers: Provider[];
 }) {
+=======
+
+export default function UpdateProduct({product, providers}: {product: Product; providers: Provider[];}) {
+>>>>>>> cd678fff4b54b253c22d9ef8494b3089a41eb792
   const { productId } = product;
   const updateProductById = updateProduct.bind(null, productId);
   return (
