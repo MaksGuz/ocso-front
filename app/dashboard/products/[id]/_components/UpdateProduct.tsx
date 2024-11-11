@@ -4,6 +4,7 @@ import { Button, Input } from "@nextui-org/react";
 import SelectProvider from "../../_components/SelectProvider";
 import DeleteProduct from "./DeleteProduct";
 import { LuCheck } from "react-icons/lu";
+
 export default function UpdateProduct({
   product,
   providers,
@@ -28,11 +29,11 @@ export default function UpdateProduct({
       <Input
         name="price"
         label="Precio"
-        defaultValue={String(product.productPrice)}
+        defaultValue={String(product.price)}
       />
       <SelectProvider
         providers={providers}
-        defaultProvider={product.provider.providerId}
+        defaultProvider={product?.provider?.providerId}
       />
       <div className="flex flex-row flex-grow-0">
         <Button type="submit" color="primary">

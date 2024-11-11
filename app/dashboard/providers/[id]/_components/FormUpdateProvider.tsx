@@ -13,7 +13,6 @@ export default function FormUpdateProvider({
   const updateProviderWithId = updateProvider.bind(null, providerId);
   return (
     <>
-      <h1 className="text-xl px-2">Actualizar datos</h1>
       <form
         action={updateProviderWithId}
         className="flex flex-wrap gap-4 flex-grow-0 bg-orange-200 rounded-md px-10 py-10 mr-10 items-center justify-center"
