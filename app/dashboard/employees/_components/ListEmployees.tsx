@@ -6,17 +6,17 @@ import EmployeeCard from "./EmployeeCard";
 import { useState } from "react";
 import { Select, SelectItem } from "@nextui-org/react";
 
-export default function ListEmployees({
-  employees,
-  locations,
-}: {
+interface ListEmployeesProps {
   locations: Location[];
   employees: Employee[];
-}) {
+}
+
+export default function ListEmployees({ employees, locations }: ListEmployeesProps) {
   const [filter, setFilter] = useState<string>();
+
   return (
     <div>
-      {location && (
+      {locations && locations.length > 0 && (
         <Select
           label="Tiendas"
           defaultSelectedKeys={[]}
@@ -25,34 +25,37 @@ export default function ListEmployees({
             setFilter(e.target.value);
           }}
         >
-          {locations.map((location) => {
-            return (
-              <SelectItem key={location.locationId}>
-                {location.locationName}
-              </SelectItem>
-            );
-          })}
+          {locations.map((location: Location) => (
+            <SelectItem 
+              key={location.locationId.toString()} 
+              value={location.locationId.toString()}
+            >
+              {location.locationName}
+            </SelectItem>
+          ))}
         </Select>
       )}
       <div className="flex flex-row gap-2">
         {employees
           .filter((employee: Employee) => {
-            if (filter === " ") return true;
-            return String(employee.location?.locationId) === filter;
+            if (!filter) return true;
+            return employee.location?.locationId.toString() === filter;
           })
           .map((employee: Employee) => {
-            if (employee.employeePhoto !== null) {
+            if (employee.employeePhoto) {
               return (
                 <EmployeePhotoCard
                   key={employee.employeeId}
                   employee={employee}
                 />
               );
-            } else {
-              return (
-                <EmployeeCard key={employee.employeeId} employee={employee} />
-              );
             }
+            return (
+              <EmployeeCard 
+                key={employee.employeeId} 
+                employee={employee} 
+              />
+            );
           })}
       </div>
     </div>

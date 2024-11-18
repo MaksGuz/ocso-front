@@ -1,5 +1,5 @@
 import { ReactNode } from "react"
-import ManagerCards from "./_components/ManagerCards"
+import ManagerCards from "./_components/ManagerCard";
 export default function LayoutManagers({ children, count }: { children: ReactNode, count: ReactNode }) {
     return (
         <>
